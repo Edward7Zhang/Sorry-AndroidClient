@@ -64,10 +64,10 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         // Handle navigation view item clicks here.
         when (item.itemId) {
             R.id.jpg -> {
-                jump()
+
             }
             R.id.gif -> {
-
+                jump()
             }
             R.id.tools -> {
 
