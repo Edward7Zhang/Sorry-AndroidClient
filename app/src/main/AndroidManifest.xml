@@ -23,7 +23,10 @@
             </intent-filter>
         </activity>
         <!--选择模板列表-->
-        <activity android:name=".templatelist.TemplateListActivity" />
+        <activity
+            android:name=".templatelist.TemplateListActivity"
+            android:label="@string/gif_item">
+        </activity>
         <activity android:name=".giftemplate.TemplateActivity" />
     </application>
 

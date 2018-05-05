@@ -6,10 +6,19 @@ import android.support.design.widget.Snackbar
 import android.support.design.widget.NavigationView
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
+import android.support.v7.widget.GridLayoutManager
+import android.support.v7.widget.RecyclerView
 import android.view.Menu
 import android.view.MenuItem
+import android.view.WindowManager
 import com.edwardzhang.sorry.base.BaseActivity
+import com.edwardzhang.sorry.entity.GifTemplateItemEntity
+import com.edwardzhang.sorry.giftemplate.TemplateActivity
 import com.edwardzhang.sorry.templatelist.TemplateListActivity
+import com.edwardzhang.sorry.templatelist.TemplateListAdapter
+import com.edwardzhang.sorry.templatelist.TemplateListViewModel
+import com.edwardzhang.sorry.utils.MATCH
+import com.edwardzhang.sorry.utils.getViewModel
 import com.edwardzhang.sorry.utils.startActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
@@ -56,9 +65,9 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             else -> return super.onOptionsItemSelected(item)
         }
     }
-    private fun jump(){
-            startActivity(TemplateListActivity::class)
-            finish()
+    private fun jump() {
+        startActivity(TemplateListActivity::class)
+        finish()
     }
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
